@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Камамрамор - Памятники и мемориальные комплексы</title>
+</head>
+<body>
+   <div class="main-viewport">
+       <header class="global-header">
+           <section class="top-header">
+            <div class="company-logo">
+                <a href="#" title="Камамрамор" rel="home" class="link-company-logo">
+                    <img src="logo1 (2).png" alt="Памятники и мемориальные комплексы">
+                </a>
+            </div>
+           </section>
+           <section class="bottom-header">
+                <article class="cpn-offer">
+                    <h1 class="title-km">Памятники и мемориальные комплексы из натурального камня</h1>
+                    <p class="horiz-line"></p>
+                    <p class="sub-title-km">Оставьте заявку и получите бесплатную консультацию</p>
+                </article>
+                <div class="input-item-bl">
+                    <form class="mt-form" novalidate="novalidate" action="" accept-charset="UTF-8" method="post">
+                        <div class="mt-input-wrapper">
+                            <div class="mt-input-wrapper-fl">
+                                <label class="lb-input">
+                                    <span class="input-cm input--em-num">
+                                        <input class="input__field input__field--em-num" type="tel" id="input-tel">
+                                        <label class="input__label input__label--em-num lb-pd-13" for="input-tel">
+                                            <span class="input__label-content input__label-content--em-num">Введите номер</span>
+                                        </label>
+                                    </span>
+                                </label>
+                                <label class="lb-input">
+                                    <span class="input-cm input--em-num">
+                                        <input class="input__field input__field--em-num" type="email" id="input-email">
+                                        <label class="input__label input__label--em-num lb-pd-13" for="input-em-num">
+                                            <span class="input__label-content input__label-content--em-num">Введите email</span>
+                                        </label>
+                                    </span>
+                                </label>
+                                <button class="conn-button conn-form-button" name="button" type="submit">Получить консультацию</button>
+                            </div>
+                            <span class="marketing-form__messages"></span>
+                        </div>
+                    </form>
+                    <p class="text-minor">* Введите номер телефона или почту и мы обязательно свяжемся с вами в течение 5 минут.</p>
+                </div>
+           </section>
+           <section class="background-img">
+                <img src="sl1.jpg" class="img-responsive" alt="Manufactory">
+           </section>
+       </header>
+   </div>
+   <script src="js/classie.js"></script>
+   <script>    	
+        (function() {
+            if (!String.prototype.trim) {
+                (function() {
+                    var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                    String.prototype.trim = function() {
+                        return this.replace(rtrim, '');
+                    };
+                })();
+            }
+
+            [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+                if( inputEl.value.trim() !== '' ) {
+                    classie.add( inputEl.parentNode, 'input--filled' );
+                }
+
+                inputEl.addEventListener( 'focus', onInputFocus );
+                inputEl.addEventListener( 'blur', onInputBlur );
+            } );
+
+            function onInputFocus( ev ) {
+                classie.add( ev.target.parentNode, 'input--filled' );
+            }
+
+            function onInputBlur( ev ) {
+                if( ev.target.value.trim() === '' ) {
+                    classie.remove( ev.target.parentNode, 'input--filled' );
+                }
+            }
+        })();
+   </script>
+</body>
+</html>
