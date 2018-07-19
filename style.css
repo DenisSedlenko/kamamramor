@@ -311,7 +311,7 @@ section  {
     color: #1a4d7f;
     line-height: 1.222;
     font-weight: 700;
-    font-family: ShopifySans, Helvetica, Arial, sans-serif;
+    font-family: "ShopifySans", Helvetica, Arial, sans-serif;
     padding-bottom: 20px;
   }
 
@@ -337,7 +337,6 @@ section  {
     display: inline-block;
     position: relative;
     vertical-align: top;
-    margin-bottom: 3vh;
   }
 
   .how-it-works-step {
@@ -399,7 +398,7 @@ section  {
     font-weight: bold;
     color: #404C60;
     letter-spacing: -1px;
-    font-size: 2vw;
+    font-size: 35px;
     line-height: 3rem;
     margin: 0;
     margin-bottom: 5rem;
@@ -670,7 +669,6 @@ section  {
   }
 
   .b__form {
-    padding: 10px 0;
     text-align: left;
     background-color: rgb(255,255,255);
     -webkit-box-shadow: 0 0 4px 0 rgba(0,0,0,0.1);
@@ -716,10 +714,11 @@ section  {
     width: 15vw;
     height: 40px;
     z-index: 1;
-    top: 10vh;
+    top: 18%;
     bottom: auto;
-    left: 2.5vw;
+    left: 7%;
     right: auto;
+    border: 2px solid transparent;
   }
 
   .b-sb-inp {
@@ -764,9 +763,9 @@ section  {
     width: 17vw;
     height: 40px;
     z-index: 2;
-    top: 10vh;
+    top: 18%;
     bottom: auto;
-    left: 19vw;
+    left: 50%;
     right: auto;
     border: 2px solid transparent;
   }
@@ -798,9 +797,9 @@ section  {
     width: 15vw;
     height: 40px;
     z-index: 3;
-    top: 17vh;
+    top: 28%;
     bottom: auto;
-    left: 2.5vw;
+    left: 7%;
     right: auto;
     border: 2px solid transparent;
   }
@@ -809,9 +808,9 @@ section  {
     width: 17vw;
     height: 40px;
     z-index: 3;
-    top: 17vh;
+    top: 28%;
     bottom: auto;
-    left: 19vw;
+    left: 50%;
     right: auto;
     border: 2px solid transparent;
   }
@@ -820,9 +819,9 @@ section  {
     width: 33.5vw;
     height: 15vh;
     z-index: 5;
-    top: 24vh;
+    top: 38%;
     bottom: auto;
-    left: 2.5vw;
+    left: 7%;
     right: auto;
     border: 2px solid transparent;
   }
@@ -847,9 +846,9 @@ section  {
     width: auto;
     height: auto;
     z-index: 6;
-    top: 41vh;
+    top: 62%;
     bottom: auto;
-    left: 29vw;
+    left: 70%;
     right: auto;
   }
 
@@ -862,9 +861,9 @@ section  {
     width: auto;
     height: auto;
     z-index: 7;
-    top: 42vh;
+    top: 63%;
     bottom: auto;
-    left: 2.5vw;
+    left: 7%;
     right: auto;
   }
 
@@ -1040,7 +1039,7 @@ section  {
   }
 
   .delivery__title, .delivery-country__title {
-    margin: 0rem 1rem;
+    margin: 0rem 0.5rem;
     padding: 0;
     font-size: 1.2rem;
     font-family: "ProximaNovaLight";
@@ -1052,14 +1051,14 @@ section  {
       position: absolute;
       top: 35%;
       left: 27%;
-      width: 15%;
+      width: 19%;
   }
 
   .delivery-info__country {
     position: absolute;
     top: 35%;
-    left: 42%;
-    width: 15%;
+    left: 46%;
+    width: 19%;
   }
 
   .delivery__info .fas, .delivery-info__country .fas {
