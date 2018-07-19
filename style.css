@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'ProximaNovaLight';
-    src: url(fonts/ProximaNova-Light.woff);
+    src: url(assets/fonts/ProximaNova-Light.woff);
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: "ShopifySans";
-    src: url(ShopifySans--regular.woff2) format("woff2");
+    src: url(assets/fonts/ShopifySans--regular.woff2) format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display:swap
@@ -714,7 +714,7 @@ section  {
     width: 15vw;
     height: 40px;
     z-index: 1;
-    top: 18%;
+    top: 28%;
     bottom: auto;
     left: 7%;
     right: auto;
@@ -763,7 +763,7 @@ section  {
     width: 17vw;
     height: 40px;
     z-index: 2;
-    top: 18%;
+    top: 28%;
     bottom: auto;
     left: 50%;
     right: auto;
@@ -797,7 +797,7 @@ section  {
     width: 15vw;
     height: 40px;
     z-index: 3;
-    top: 28%;
+    top: 38%;
     bottom: auto;
     left: 7%;
     right: auto;
@@ -808,7 +808,7 @@ section  {
     width: 17vw;
     height: 40px;
     z-index: 3;
-    top: 28%;
+    top: 38%;
     bottom: auto;
     left: 50%;
     right: auto;
@@ -819,7 +819,7 @@ section  {
     width: 33.5vw;
     height: 15vh;
     z-index: 5;
-    top: 38%;
+    top: 48%;
     bottom: auto;
     left: 7%;
     right: auto;
@@ -846,7 +846,7 @@ section  {
     width: auto;
     height: auto;
     z-index: 6;
-    top: 62%;
+    top: 72%;
     bottom: auto;
     left: 70%;
     right: auto;
@@ -861,7 +861,7 @@ section  {
     width: auto;
     height: auto;
     z-index: 7;
-    top: 63%;
+    top: 73%;
     bottom: auto;
     left: 7%;
     right: auto;
