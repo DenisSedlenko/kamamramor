@@ -14,6 +14,7 @@
     <meta name="description" content="Купить натуральный камень в Набережных Челнах: облицовочный натуральный камень, производство изделий из натурального камня (мрамора, гранита, травертина, оникса).">
     <meta name="keywords" content="купить мрамор, купить мрамор в челнах, памятники челны, памятники на могилу набережные челны, Кама Мрамор, гранитная плитка, мраморная плитка, изготовление памятников, надгробные памятники, мрамор Челны, памятники на могилу, купить мрамор челны, гранит Челны, гранит Казань, гранитный памятник на могилу фигурная резка, завод мрамор набережные челны, натуральный природный облицовочный отделочный камень цена купить отделка облицовка фото каталог травертин известняк цена продажа облицовочный камень облицовка стоимость, памятник изготовить" />
     <meta charset="windows-1251">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 </head>
 <body>
@@ -31,7 +32,7 @@
                     <h4 class="delivery__title">Установка и продажа памятников по всему Татарстану</h4>
                 </div>
             </div>
-            <div class="delivery-info__country">
+            <div class="delivery__info">
                 <i class="fas fa-boxes"></i>
                 <div class="icon-box__text">
                     <h4 class="delivery-country__title">Оптовые поставки памятников по всей России</h4>
@@ -82,7 +83,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="widget" style="padding: 50px 30px 50px 0;">
+                        <div class="widget">
                             <div class="icon-box">
                                 <i class="fa fa-phone icon__info" style="margin-top: 15px"></i>
                                 <div class="icon-box__text">
@@ -92,7 +93,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="widget" style="padding: 50px 30px 50px 0;">
+                        <div class="widget">
                             <div class="icon-box">
                                 <i class="fa fa-clock icon__info" style="margin-top: 15px"></i>
                                 <div class="icon-box__text">
@@ -114,16 +115,14 @@
                     </div>
                 </div>
            </section>
-           <section class="background-img">
-                <img src="assets/kamamramor/sl1.jpg" class="img-responsive" alt="Manufactory">
-           </section>
+           <section class="bck-vd-img"></section>
        </header>
        <main>
         <section>
             <article class="container-80x" style="margin-top: 3%">
             <div class="layout layout-center">
                 <div class="layout-title mx-wd">
-                        <h2 class="xs-text-center">Наши преимущества</h2>
+                        <h2 class="km-text-lt">Наши преимущества</h2>
                 </div>
                 <div class="flex-layout mx-wd">
                     <div class="flex__item">
@@ -223,7 +222,7 @@
             <article class="container-70x">
             <div class="layout layout-center">
                 <div class="layout-title mx-wd">
-                    <h2 class="xs-text-center">Материалы</h2>
+                    <h2 class="km-text-lt">Материалы</h2>
                 </div>
                 <div class="flex-layout mx-wd" style="justify-content: center;">
                 <div class="mat-preview">
@@ -364,7 +363,7 @@
         <article class="container">
             <div class="layout layout-center flex-layout">
             <div class="layout-title mx-wd">
-                    <h2 class="xs-text-center">Отзывы</h2>
+                    <h2 class=km-text-lt">Отзывы</h2>
             </div>
             <div class="flex-layout mx-wd">
                 <div class="quote-block">
@@ -615,7 +614,7 @@
             <article class="container">
             <div class="layout layout-center" style="padding-bottom: 180px;">
                 <div class="layout-title">
-                    <h2 class="xs-text-center">Как мы работаем</h2>
+                    <h2 class="km-text-lt">Как мы работаем</h2>
                 </div>
                 <div class="how-it-works layout-title">
                     <div class="layout-bl layout-center">
@@ -833,6 +832,14 @@
     </footer>
    </div>
    <script src="assets/js/classie.js"></script>
+   <script>
+        $(document).ready(function(){
+            $('.bck-vd-img').css('height',$('.bottom-header').outerHeight());
+        })
+        $(window).resize(function(e){
+            $('.bck-vd-img').css('height',$('.bottom-header').outerHeight());
+        });
+   </script>
    <script>
         (function() {
             if (!String.prototype.trim) {
