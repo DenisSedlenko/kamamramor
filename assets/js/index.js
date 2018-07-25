@@ -1,37 +1,41 @@
 $(document).on('ready', function() {
   $('.bck-vd-img').css('height', $('.bottom-header').outerHeight());
-  var slide = $('.material-single');
-  var slideTotal = slide.length - 1;
-  var slideCurrent = -1;
+  var slide = null;
+  var slideTotal = 0;
+  var slideCurrent = 0;
 
   function slideInitial() {
-    slide.addClass('proactivede');
+    $('.material-single').addClass('proactivede');
     setTimeout(function() {
-      slideRight();
+      slideRight($('.material-single'), -1, $('.material-single').length-1);
+    }, 500);
+    $('.o-work-single').addClass('proactivede');
+    setTimeout(function() {
+      slideRight($('.o-work-single'), -1, $('.o-work-single').length-1);
     }, 500);
   }
 
-  function slideRight() {
-    if (slideCurrent < slideTotal) {
-      slideCurrent++;
+  function slideRight(sl, cur, total) {
+    if (cur < total) {
+      cur++;
     } else {
-      slideCurrent = 0;
+      cur = 0;
     }
 
-    if (slideCurrent > 0) {
-      var preactiveSlide = slide.eq(slideCurrent - 1);
+    if (cur > 0) {
+      var preactiveSlide = sl.eq(cur - 1);
     } else {
-      var preactiveSlide = slide.eq(slideTotal);
+      var preactiveSlide = sl.eq(total);
     }
-    var activeSlide = slide.eq(slideCurrent);
-    if (slideCurrent < slideTotal) {
-      var proactiveSlide = slide.eq(slideCurrent + 1);
+    var activeSlide = sl.eq(cur);
+    if (cur < total) {
+      var proactiveSlide = sl.eq(cur + 1);
     } else {
-      var proactiveSlide = slide.eq(0);
+      var proactiveSlide = sl.eq(0);
 
     }
 
-    slide.each(function() {
+    sl.each(function() {
       var thisSlide = $(this);
       if (thisSlide.hasClass('preactivede')) {
         thisSlide.removeClass('preactivede preactive active proactive').addClass('proactivede');
@@ -76,13 +80,37 @@ $(document).on('ready', function() {
     activeSlide.removeClass('preactivede preactive proactive proactivede').addClass('active');
     proactiveSlide.removeClass('preactivede preactive active proactivede').addClass('proactive');
   }
-  var left = $('.slider-left');
-  var right = $('.slider-right');
-  left.on('click', function() {
-    slideLeft();
-  });
-  right.on('click', function() {
-    slideRight();
-  });
+
+  var leftMaterials = $('.materials-container .materials-content .slider-left');
+  var rightMaterials = $('.materials-container .materials-content .slider-right');
+
+  var leftWork = $('.o-works-container .o-works-content .slider-left');
+  var rightWork = $('.o-works-container .o-works-content .slider-right');
+
+  if (leftMaterials || rightMaterials) {
+    slide = $('.material-single');
+    slideTotal = slide.length - 1;
+    slideCurrent = -1;
+    leftMaterials.on('click', function() {
+      slideLeft();
+    });
+    rightMaterials.on('click', function() {
+      slideRight(slide, slideCurrent, slideTotal);
+    });
+  }
+
+  if (leftWork || rightWork) {
+    slide = $('.material-single');
+    slideTotal = slide.length - 1;
+    slideCurrent = -1;
+    leftWork.on('click', function() {
+      slideLeft();
+    });
+    rightWork.on('click', function() {
+      slideRight(slide, slideCurrent, slideTotal);
+    });
+  }
+
+
   slideInitial();
 });
