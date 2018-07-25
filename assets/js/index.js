@@ -1,5 +1,6 @@
 $(document).on('ready', function() {
-  var slide = $('.slider-single');
+  $('.bck-vd-img').css('height', $('.bottom-header').outerHeight());
+  var slide = $('.material-single');
   var slideTotal = slide.length - 1;
   var slideCurrent = -1;
 
