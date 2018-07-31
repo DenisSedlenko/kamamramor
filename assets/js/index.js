@@ -1,8 +1,31 @@
 $(document).on('ready', function() {
   $('.bck-vd-img').css('height', $('.bottom-header').outerHeight());
-  var slide = null;
-  var slideTotal = 0;
-  var slideCurrent = 0;
+
+  var groups = Array.prototype.slice.call(document.querySelectorAll('.quote-btn-dots'));
+
+  var _iteratorNormalCompletion2 = true;
+  var _didIteratorError2 = false;
+  var _iteratorError2 = undefined;
+
+  try {
+    for (var _iterator2 = groups[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+      var group = _step2.value;
+      new BtnGroup(group)
+    }
+  } catch (err) {
+    _didIteratorError2 = true;
+    _iteratorError2 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion2 && _iterator2.return) {
+        _iterator2.return();
+      }
+    } finally {
+      if (_didIteratorError2) {
+        throw _iteratorError2;
+      }
+    }
+  }
 
   function slideInitial() {
     $('.material-single').addClass('proactivede');
