@@ -409,8 +409,6 @@ h1 {
   }
 }
 
-
-
 section  {
     width: 100%;
   }
@@ -1105,15 +1103,15 @@ section  {
 
 @media (max-width: 480px) {
   .icon-box__title {
-    font-size: 0.8rem;
+    font-size: 10px;
   }
 
   .icon-box__subtitle {
-    font-size: 1rem;
+    font-size: 12px;
   }
 
   .icon__info {
-    margin-top: 0;
+    margin-top: 4px !important;
   }
 }
 
@@ -1785,6 +1783,10 @@ h6.quote-title__h6 {
     line-height: 20px;
   }
 
+  .quote-inner {
+    padding: 25px 30px;
+  }
+
   h6.quote-title__h6 {
     font-size: 12px;
   }
@@ -1793,10 +1795,10 @@ h6.quote-title__h6 {
     left: 4%;
   }
   .quote-column {
-    height: 460px;
+    height: 380px;
   }
   .quote-wrapper {
-    height: 460px;
+    height: 380px;
   }
 }
 
