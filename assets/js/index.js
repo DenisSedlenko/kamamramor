@@ -1,6 +1,25 @@
 $(document).on('ready', function() {
   $('.bck-vd-img').css('height', $('.bottom-header').outerHeight());
 
+  var mi, wi = 0;
+  $(function() {
+    $('.material-single-image, .o-work-single-image').lazy({
+      visibleOnly: true,
+      effect: "show",
+      effectTime: 1,
+      threshold: 0,
+      afterLoad: function(element) {
+        if (element.context.className === 'material-single-image') {
+          mi === 13 ? $('.material-single').css('background-image', 'none') : mi++;
+        }
+
+        if (element.context.className === 'o-work-single-image') {
+          wi === 18 ? $('.o-work-single').css('background-image', 'none') : wi++;
+        }
+      }
+    });
+  });
+
   var groups = Array.prototype.slice.call(document.querySelectorAll('.quote-btn-dots'));
 
   var _iteratorNormalCompletion2 = true;

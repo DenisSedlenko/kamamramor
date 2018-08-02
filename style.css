@@ -1167,6 +1167,9 @@ section  {
   width: 100%;
   height: 100%;
   transition: z-index 0ms 250ms;
+  background-image: url('assets/kamamramor/kama-spinner.gif');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .materials-container .materials-content .material-single:hover .image-overlay {
