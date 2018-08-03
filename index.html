@@ -584,98 +584,74 @@
                 </div>
             </div>
         </section>
-        <section class="mention-bl">
-        <div class="tddiv">
-            <a id="ac_1220" class="ascroll" title="Форма заявки" path="/contact-form" style="top: 0px;">
-                <span id="/contact-form"></span>
-            </a>
-            <div class="vr-bl">
-                <div class="vd-bl">
-                    <div class="dp_bl">
-                    <div class="dp-box">
-                        <form action="common.php" name="form" class="form__bx" method="post" enctype="multipart/form-data">
-                            <div class="b__form">
-                                <div class="box-1 box-cm">
-                                    <div class="b-sb-1">
-                                        <p style="text-transform: uppercase;">Подать заявку</p>
+        <section class="section-form-request">
+            <div class="section-background" style="background: url('assets/kamamramor/hexagon.png') repeat;"></div>
+            <div class="section-request">
+                <div class="layout-center">
+                    <h2 class="km-text-lt" style="color:#ffffff">Оставьте заявку</h2>
+                </div>
+                <p class="section-request-tittle layout-center">Заполните форму ниже, и мы обязательно свяжемся с вами в ближайшее время.</p>
+                <div class="section-request-row">
+                    <div class="section-request-inner">
+                        <form role="form" method="post" enctype="multipart/form-data" action="common.php" class="request-contact-form">
+                            <div class="input-wrapper-request">
+                                <div class="left-inputs">
+                                    <div class="form-group">
+                                        <div class="input-form-icon">
+                                            <input type="text" required="" name="name" value="" pattern="^[А-Яа-яЁё\s]+$" class="form-control-name form-control" placeholder="Имя">
+                                            <div class="input-icon">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-form-icon">
+                                            <input type="email" required="" name="email" value="" class="form-control-email form-control" placeholder="Email">
+                                            <div class="input-icon">
+                                                <i class="fas fa-envelope"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-form-icon">
+                                            <input type="tel" required="" value="" pattern="[0-9]{10,12}" class="form-control-phone form-control" placeholder="Номер телефона">
+                                            <div class="input-icon">
+                                                <i class="fas fa-phone"></i>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="box-2 box-cm">
-                                    <div class="b-sb-inp">
-                                        <input type="text" placeholder="* Ваше имя" required="" class="fbx-field-inp" name="name" value="" pattern="^[А-Яа-яЁё\s]+$" title="Введите ваше имя">
-                                    </div>
-                                </div>
-                                <div class="box-3 box-cm">
-                                    <div class="b-sb-inp">
-                                        <table class="bx-tb">
-                                        <tbody>
-                                            <tr>
-                                            <td class="td" style="padding-right:6px;width:50px;height:100%;">
-                                                <input type="text" required="" style="text-align:center;padding:0;" class="fbx-field-inp" name="part1" value="+7" maxlength="4" title="Код страны">
-                                            </td>
-                                            <td class="td" style="height:100%;">
-                                                <input type="tel" class="fbx-field-inp" name="part2" placeholder="* Номер телефона" required="" value="" pattern="[0-9]{10,12}" title="10 цифр после +7">
-                                            </td>
-                                            </tr>
-                                        </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="box-4 box-cm">
-                                    <div class="b-sb-inp">
-                                        <input type="text" placeholder="* Ваша фамилия" required="" class="fbx-field-inp" name="surname" value="" pattern="^[А-Яа-яЁё\s]+$" title="Введите вашу фамилию">
-                                    </div>
-                                </div>
-                                <div class="box-5 box-cm">
-                                    <div class="b-sb-inp">
-                                        <input type="email" placeholder="* Ваш e-mail" required="" class="fbx-field-inp" name="email" value="">
-                                    </div>
-                                </div>
-                                <div class="box-6 box-cm">
-                                    <div class="b-sb-inp">
-                                        <textarea placeholder="Комментарий к заявке" required="" name="comment" rows="9"></textarea>
-                                    </div>
-                                </div>
-                                <div class="box-bt box-cm">
-                                    <button type="submit" class="conn-form-button box-btn">ОТПРАВИТЬ</button>
-                                </div>
-                                <div class="box-in-fl box-cm">
-                                    <div class="fbx-field-inp-fl ">
-                                        <input type="file" name="file">
+                                <div class="left-inputs">
+                                    <div class="form-group">
+                                        <div class="input-form-icon">
+                                            <textarea required="" name="comment" class="form-control-comments form-control" placeholder="Текст сообщения" rows="4" style="height: 178px;"></textarea>
+                                            <div class="input-icon">
+                                                <i class="fas fa-pen"></i>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="file-contact-form">
+                                <input type="file" name="file" id="file-form">
+                                <label for="file-form">
+                                    <div class="input-icon">
+                                        <i class="fas fa-download"></i>
+                                    </div>
+                                    <span>Выберите файл</span>
+                                </label>
+
+                            </div>
+                            <p class="layout-center">
+                                <input type="hidden" value="base">
+                                <button class="button-request-form" type="submit"> Отправить заявку
+                                    <i class="fas fa-paper-plane" style="margin-left: 5px;"></i>
+                                </button>
+                            </p>
                         </form>
-                    </div>
-                    <div class="tl-bl-bx box-cm">
-                        <div class="tl-em-bl">
-                        <p><i class="fa fa-phone contact" aria-hidden="true"></i>&nbsp;&nbsp;</p>
-                        <p style="text-align: center;">
-                            <a href="tel:+79003200494" style="text-decoration: none;">
-                            <span>+7 (900) 320-04-94 </span>
-                            </a>
-                        </p>
-                        <p style="text-align: center;">
-                            <a href="tel:+79510610888" style="text-decoration: none;">
-                            <span>+7 (951) 061-08-88 </span>
-                            </a>
-                        </p>
-                        </div>
-                    </div>
-                    <div class="em-bl-bx box-cm">
-                        <div class="tl-em-bl">
-                        <p><i class="fa fa-envelope contact" aria-hidden="true"></i>&nbsp;&nbsp;</p>
-                        <p style="text-align: center;">
-                            <a href="mailto:kamamramor16@yandex.ru" style="text-decoration: none;">
-                            <span>kamamramor16@yandex.ru</span>
-                            </a>
-                        </p>
-                        </div>
-                    </div>
                     </div>
                 </div>
             </div>
-        </div>
         </section>
     </main>
     <footer>
@@ -701,6 +677,31 @@
         $(window).resize(function(e){
             $('.bck-vd-img').css('height',$('.bottom-header').outerHeight());
         });
+   </script>
+   <script>
+        ( function ( document, window, index )
+        {
+            var inputs = document.querySelectorAll( '#file-form' );
+            Array.prototype.forEach.call( inputs, function( input )
+            {
+                var label	 = input.nextElementSibling,
+                    labelVal = label.innerHTML;
+
+                input.addEventListener( 'change', function( e )
+                {
+                    var fileName = '';
+                    if( this.files && this.files.length > 1 )
+                        fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+                    else
+                        fileName = e.target.value.split( '\\' ).pop();
+
+                    if( fileName )
+                        label.querySelector( 'span' ).innerHTML = fileName;
+                    else
+                        label.innerHTML = labelVal;
+                });
+            });
+        }( document, window, 0 ))
    </script>
    <script>
         (function() {
