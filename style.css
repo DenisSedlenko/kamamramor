@@ -847,12 +847,12 @@ footer {
   color: #171c26;
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
-  font-size: 130%;
-  height: 2vw;
+  font-size: 16px;
   margin-left: 2%;
-  line-height: 2vw !important;
+  line-height: 34px!important;
   text-align: center;
-  width: 2vw;
+  width: 34px;
+  height: 34px;
 }
 
 .grid__ft {
@@ -882,6 +882,35 @@ footer .copyright {
 
 .footer_social {
   text-align: right;
+}
+
+
+@media (max-width: 818px) {
+  .footer__contact {
+    font-size: 13px;
+    margin-left: 5px;
+    line-height: 28px!important;
+    width: 28px;
+    height: 28px;
+  }
+
+  footer .copyright {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .footer__contact {
+    font-size: 10px;
+    margin-left: 5px;
+    line-height: 20px!important;
+    width: 20px;
+    height: 20px;
+  }
+
+  footer .copyright {
+    font-size: 0.7rem;
+  }
 }
 
 .fst__info {
