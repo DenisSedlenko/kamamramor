@@ -1,3 +1,6 @@
+$(window).load(transferInputModule);
+$(window).resize(transferInputModule); 
+$(window).on('load resize', transferInputModule);
 $(document).on('ready', function() {
   $('.bck-vd-img').css('height', $('.bottom-header').outerHeight());
 
@@ -151,3 +154,9 @@ $(document).on('ready', function() {
 
   slideInitial();
 });
+
+function transferInputModule(){
+  $(window).width() <= '480' ?
+    $('.left-inputs:nth-child(2)').append($('.form-group-file')) :
+    $('.left-inputs:nth-child(1)').append($('.form-group-file'));
+}

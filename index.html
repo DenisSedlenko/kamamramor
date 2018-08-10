@@ -654,11 +654,17 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="form-group-file">
+                                        <div class="input-form-icon-file">
+                                            <input type="file" name="file" id="file-form-input">
+                                            <label for="file-form-input" class="form-file-content"><i class="fas fa-file-upload form-icon-file"></i><span>Прикрепите файл</span></label>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="left-inputs">
                                     <div class="form-group">
                                         <div class="input-form-icon">
-                                            <textarea required="" name="comment" class="form-control-comments form-control" placeholder="Текст сообщения" rows="4" style="height: 178px;"></textarea>
+                                            <textarea required="" name="comment" class="form-control-comments form-control" placeholder="Текст сообщения" rows="4"></textarea>
                                             <div class="input-icon">
                                                 <i class="fas fa-pen"></i>
                                             </div>
@@ -666,19 +672,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="file-contact-form">
-                                <input type="file" name="file" id="file-form">
-                                <label for="file-form">
-                                    <div class="input-icon">
-                                        <i class="fas fa-download"></i>
-                                    </div>
-                                    <span>Выберите файл</span>
-                                </label>
-
-                            </div>
                             <p class="layout-center">
                                 <input type="hidden" value="base">
-                                <button class="button-request-form" type="submit"> Отправить заявку
+                                <button class="button-request-form" type="submit"> Оставить заявку
                                     <i class="fas fa-paper-plane" style="margin-left: 5px;"></i>
                                 </button>
                             </p>
@@ -715,7 +711,7 @@
    <script>
         ( function ( document, window, index )
         {
-            var inputs = document.querySelectorAll( '#file-form' );
+            var inputs = document.querySelectorAll( '#file-form-input' );
             Array.prototype.forEach.call( inputs, function( input )
             {
                 var label	 = input.nextElementSibling,

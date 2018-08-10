@@ -1903,12 +1903,81 @@ main section.section-form-request {
   }
 }
 
-.form-group {
+.form-group,
+.form-group-file {
   margin-bottom: 20px;
 }
 
 .form-group .input-form-icon {
   position: relative;
+}
+
+.form-group-file .input-form-icon-file {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px dashed #616b75;
+  height: 48px;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0 15px;
+  text-overflow: ellipsis;
+  font-size: 19px;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+.form-group-file .input-form-icon-file .form-file-content {
+  color: #616b75;
+  font-size: 20px;
+}
+
+.form-group .form-control-name,
+.form-group .form-control-email,
+.form-group .form-control-phone,
+.form-group .form-control-comments {
+  height: 46px;
+  font-size: 16px;
+  padding: 10px 14px 11px;
+}
+
+.form-control-comments {
+  height: 249px !important;
+}
+
+@media (max-width: 516px) {
+  .form-group-file .input-form-icon-file .form-file-content {
+    color: #616b75;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-group-file .input-form-icon-file .form-file-content {
+    color: #616b75;
+    font-size: 20px;
+  }
+
+  .form-control-comments {
+    height: 178px !important;
+  }
+}
+
+.form-group-file .input-form-icon-file .form-file-content:hover {
+  color: #a7acb1;
+}
+
+.form-group-file .input-form-icon-file .form-file-content  .form-icon-file {
+  margin-right: 8px;
+}
+
+.form-group-file .input-form-icon-file #file-form-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
 
 .form-group .input-form-icon .input-icon {
@@ -1923,15 +1992,6 @@ main section.section-form-request {
   -webkit-transition: all .1s ease-in-out 0s;
   -o-transition: all .1s ease-in-out 0s;
   transition: all .1s ease-in-out 0s;
-}
-
-.form-group .form-control-name,
-.form-group .form-control-email,
-.form-group .form-control-phone,
-.form-group .form-control-comments {
-  height: 46px;
-  font-size: 16px;
-  padding: 10px 14px 11px;
 }
 
 .form-group .form-control,
@@ -1968,76 +2028,24 @@ main section.section-form-request {
   text-shadow: 0 1px 0 #fff;
 }
 
-.request-contact-form .file-contact-form {
-  width: 150px;
-  margin: -5px auto 15px;
-}
-
-.request-contact-form .file-contact-form #file-form {
-  width: 0.1px;
-  height: 0.1px;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  z-index: -1;
-}
-
-#file-form + label .input-icon {
-  font-size: 1.25rem;
-  vertical-align: middle;
-  margin-top: -0.25em;
-  margin-right: 0.25em;
-  display: inline-block;
-}
-
-#file-form + label {
-  font-size: 1.25rem;
-  font-weight: 700;
-  -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-  white-space: nowrap;
-  cursor: pointer;
-  display: inline-block;
-  overflow: hidden;
-  padding: 0.625rem 0;
-}
-
-#file-form:focus+label,
-#file-form+label:hover {
-  color: #fff;
-}
-
-
 .request-contact-form .button-request-form{
-  background: #609ddb;
-  border: 1px solid #5491d5;
-  -webkit-box-shadow: inset 0 1px 0 #6aa7df;
-          box-shadow: inset 0 1px 0 #6aa7df;
-  z-index: 9;
-  color: #fff;
-  text-shadow: 0 1px 0 rgba(0,0,0,.1);
+  box-sizing: border-box;
+  height: 56px;
+  padding-left: 40px;
+  padding-right: 40px;
+  outline: none;
+  background: #ffcc24;
+  border: none;
   font-size: 16px;
-  font-family: "Open Sans", Arial, sans-serif;
-  line-height: 20px;
-  padding: 12px 17px;
-  margin: 20px 0;
-  vertical-align: middle;
-  text-align: left;
+  text-align: center;
+  -webkit-appearance: none;
+  font-weight: 700;
+  white-space: nowrap;
+  background-image: none;
   cursor: pointer;
-  -webkit-user-select: none;
-    -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  white-space: normal;
-  border-radius: 3px;
-  -webkit-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  display: inline-block;
-  position: relative;
-  outline: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  margin: 0;
+  margin-top: 40px;
+  text-transform: uppercase;
 }
 
 .advantages-heading {
