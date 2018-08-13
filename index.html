@@ -48,30 +48,18 @@
                 </article>
                 <div class="input-item-bl">
                     <form class="mt-form" novalidate="novalidate" action="recall.php" accept-charset="UTF-8" method="post">
-                        <div class="mt-input-wrapper">
-                            <div class="mt-input-wrapper-fl">
-                                <label class="lb-input">
-                                    <span class="input-cm input--em-num">
-                                        <input class="input__field input__field--em-num" type="tel" name="phone" id="input-tel">
-                                        <label class="input__label input__label--em-num lb-pd-13" for="input-tel">
-                                            <span class="input__label-content input__label-content--em-num">Введите номер</span>
-                                        </label>
-                                    </span>
-                                </label>
-                                <label class="lb-input">
-                                    <span class="input-cm input--em-num">
-                                        <input class="input__field input__field--em-num" name="email" type="email" id="input-email">
-                                        <label class="input__label input__label--em-num lb-pd-13" for="input-em-num">
-                                            <span class="input__label-content input__label-content--em-num">Введите email</span>
-                                        </label>
-                                    </span>
-                                </label>
-                                <button class="conn-button conn-form-button" name="button" type="submit">Получить консультацию</button>
+                        <div class="shot-input-box"> 
+                            <div class="shot-input-internal"> 
+                                <input type="text" name="phone" required class="short-input" placeholder="ВВЕДИТЕ ТЕЛЕФОН" style="color:#ffffff; border:3px solid #ffffff; background-color:#ffffff; "> 
                             </div>
-                            <span class="marketing-form__messages"></span>
+                            <div class="shot-input-internal"> 
+                                <input type="text" name="name" required class="short-input" placeholder="ВВЕДИТЕ ИМЯ" style="color:#ffffff; border:3px solid #ffffff; background-color:#ffffff; "> 
+                            </div> 
+                            <div class="shot-input-internal" style="padding-right: 0"> 
+                                <button type="submit" class="short-button-submit">Получить консультацию</button> 
+                            </div> 
                         </div>
                     </form>
-                    <p class="text-minor">* Введите номер телефона или почту и мы обязательно свяжемся с вами в течение 5 минут.</p>
                 </div>
                 <div class="fst__info">
                     <div class="container__info">
@@ -701,7 +689,6 @@
       </section>
     </footer>
    </div>
-   <script src="assets/js/classie.js"></script>
    <script src="assets/js/index.js"></script>
    <script>
         $(window).resize(function(e){
@@ -732,37 +719,6 @@
                 });
             });
         }( document, window, 0 ))
-   </script>
-   <script>
-        (function() {
-            if (!String.prototype.trim) {
-                (function() {
-                    var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-                    String.prototype.trim = function() {
-                        return this.replace(rtrim, '');
-                    };
-                })();
-            }
-
-            [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
-                if( inputEl.value.trim() !== '' ) {
-                    classie.add( inputEl.parentNode, 'input--filled' );
-                }
-
-                inputEl.addEventListener( 'focus', onInputFocus );
-                inputEl.addEventListener( 'blur', onInputBlur );
-            } );
-
-            function onInputFocus( ev ) {
-                classie.add( ev.target.parentNode, 'input--filled' );
-            }
-
-            function onInputBlur( ev ) {
-                if( ev.target.value.trim() === '' ) {
-                    classie.remove( ev.target.parentNode, 'input--filled' );
-                }
-            }
-        })();
    </script>
 </body>
 </html>
