@@ -85,6 +85,39 @@ body, form, p, h3, h5 {
   margin: 0 auto 6% auto;
 }
 
+
+.status-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999999;
+  height: 50px;
+  display: none;
+}
+
+.status-message>.success-message {
+  padding-left: 20px;
+  background-color: green;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 50px;
+  height: 100%;
+  display: none;
+}
+
+.status-message>.fail-message {
+  padding-left: 20px;
+  background-color: red;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 50px;
+  height: 100%;
+  display: none;
+}
+
 .mt-input-wrapper {
   margin-bottom: 0;
   text-align: left;

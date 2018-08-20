@@ -17,6 +17,10 @@
 </head>
 <body>
    <div class="main-viewport">
+       <div class="status-message">
+           <p class="success-message">Ваша заявка отправлена!</p>
+           <p class="fail-message">Ваша заявка не отправлена! Проверьте корректность введенных данных.</p>
+       </div>
        <header class="global-header">
            <section class="top-header">
             <div class="company-logo">
@@ -44,7 +48,7 @@
                     <p class="sub-title-km">Оставьте заявку и получите бесплатную консультацию</p>
                 </article>
                 <div class="input-item-bl">
-                    <form class="mt-form" novalidate="novalidate" action="recall.php" accept-charset="UTF-8" method="post">
+                    <form class="mt-form" id="short-form" action="/">
                         <div class="shot-input-box"> 
                             <div class="shot-input-internal"> 
                                 <input type="text" name="phone" required class="short-input" placeholder="ВВЕДИТЕ ТЕЛЕФОН" style="color:#ffffff; border:3px solid #ffffff; background-color:#ffffff; "> 
@@ -496,12 +500,12 @@
                     <p class="section-request-tittle layout-center">Заполните форму ниже, и мы обязательно свяжемся с вами в ближайшее время.</p>
                     <div class="section-request-row">
                         <div class="section-request-inner">
-                            <form role="form" method="post" enctype="multipart/form-data" action="common.php" class="request-contact-form">
+                            <form role="form" action="/" class="request-contact-form" id="base-form">
                                 <div class="input-wrapper-request">
                                     <div class="left-inputs">
                                         <div class="form-group">
                                             <div class="input-form-icon">
-                                                <input type="text" required="" name="name" value="" pattern="^[А-Яа-яЁё\s]+$" class="form-control-name form-control" placeholder="Имя">
+                                                <input type="text" required name="name" value="" pattern="^[А-Яа-яЁё\s]+$" class="form-control-name form-control" placeholder="Имя">
                                                 <div class="input-icon">
                                                     <i class="fas fa-user"></i>
                                                 </div>
@@ -509,7 +513,7 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="input-form-icon">
-                                                <input type="email" required="" name="email" value="" class="form-control-email form-control" placeholder="Email">
+                                                <input type="email" name="email" value="" class="form-control-email form-control" placeholder="Email">
                                                 <div class="input-icon">
                                                     <i class="fas fa-envelope"></i>
                                                 </div>
@@ -517,7 +521,7 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="input-form-icon">
-                                                <input type="tel" required="" value="" pattern="[0-9]{10,12}" class="form-control-phone form-control" placeholder="Номер телефона">
+                                                <input type="tel" name="phone" required value="" pattern="[0-9]{10,12}" class="form-control-phone form-control" placeholder="Номер телефона">
                                                 <div class="input-icon">
                                                     <i class="fas fa-phone"></i>
                                                 </div>
@@ -533,7 +537,7 @@
                                     <div class="left-inputs">
                                         <div class="form-group">
                                             <div class="input-form-icon">
-                                                <textarea required="" name="comment" class="form-control-comments form-control" placeholder="Текст сообщения" rows="4"></textarea>
+                                                <textarea name="comment" class="form-control-comments form-control" placeholder="Текст сообщения" rows="4"></textarea>
                                                 <div class="input-icon">
                                                     <i class="fas fa-pen"></i>
                                                 </div>
@@ -542,7 +546,6 @@
                                     </div>
                                 </div>
                                 <p class="layout-center">
-                                    <input type="hidden" value="base">
                                     <button class="button-request-form" type="submit"> Оставить заявку
                                         <i class="fas fa-paper-plane" style="margin-left: 5px;"></i>
                                     </button>
@@ -571,7 +574,7 @@
         </footer>
    </div>
    <script src='assets/js/swiper.min.js'></script>
-   <script src="assets/js/index.js"></script>
+   <script src="assets/js/kamamramor.min.js"></script>
    <script>
         $(window).resize(function(e){
             $('.bck-vd-img').css('height',$('.bottom-header').outerHeight());
